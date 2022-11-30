@@ -1,4 +1,4 @@
-#Application System
+# Application System
 
 This is a work in progress project for Northwestern University Fintech Club.
 
