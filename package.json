@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/northwesternfintech/applications/issues"
   },
-  "homepage": "https://github.com/northwesternfintech/applications#readme"
+  "homepage": "https://github.com/northwesternfintech/applications#readme",
+  "dependencies": {
+    "firebase": "^9.15.0"
+  }
 }
