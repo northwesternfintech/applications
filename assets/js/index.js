@@ -37,43 +37,31 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
-function signUp() {
-    var email = document.getElementById("email");
-    var password = document.getElementById("password");
+createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+});
 
-    createUserWithEmailAndPassword(auth, email.value, password.value)
-        .then((userCredential) => {
-            // Account created and signed in
-            const user = userCredential.user;
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-        });
-}
+signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+});
 
-function signIn() {
-    var email = document.getElementById("email");
-    var password = document.getElementById("password");
-
-    signInWithEmailAndPassword(auth, email.value, password.value)
-        .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-        });
-}
-
-function signOut() {
-    signOut(auth).then(() => {
-        // Sign-out successful.
-    }).catch((error) => {
-        // An error happened.
-    });
-}
+signOut(auth).then(() => {
+    // Sign-out successful.
+}).catch((error) => {
+    // An error happened.
+});
