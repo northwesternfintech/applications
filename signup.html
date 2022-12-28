@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NUFT Applications</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="icon" type="image/x-icon" href="images/nuft.png">
+        <script type = "module" src = "/assets/js/index.js"></script>
+</head>
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Header -->
+                <header id="header" class="alt">
+                    <h1><a href="index.html">NUFT Applications</a></h1>
+                    <nav>
+                        <a href="#menu">Menu</a>
+                    </nav>
+                </header>
+
+            <!-- Menu -->
+                <nav id="menu">
+                    <div class="inner">
+                        <h2>Menu</h2>
+                        <ul class="links">
+                            <li><a href="https://northwesternfintech.github.io/">NUFT Home</a></li>
+                            <li><a href="index.html">Log In</a></li> <!-- TODO - finish this !-->
+                            <li><a href="signup.html">Sign Up</a></li>
+                        </ul>
+                        <a href="#" class="close">Close</a>
+                    </div>
+                </nav>
+
+            <!-- Banner -->
+                <section id="banner">
+                    <div class="inner">
+                        <div class="logo"><img src="images/nuft.png" style="width:5%; height:5%"></div>
+                        <h2>NUFT Applications</h2>
+                        <p>Sign up to apply here!</p> 
+                    </div>
+                </section>
+
+            <!-- Wrapper -->
+            <section id="wrapper">
+
+                <!-- Content -->
+                    <div class="wrapper">
+                        <div class="inner">
+
+                            <section>
+                                <h2 class="major">Sign Up</h2>
+                                <p>Create a new account!</p>
+                                <form method="post" action="#"> <!--Get This Working!-->
+                                    <div class="fields">
+                                        <div class="field">
+                                            <label for="name">Northwestern Email</label>
+                                            <input type="text" name="name" id="name" required/>
+                                        </div>
+                                        <div class="field">
+                                            <label for="email">Password</label>
+                                            <input type="password" name="email" id="email" required/>
+                                        </div>
+                                        <div class="field">
+                                            <label for="email">Confirm Password</label>
+                                            <input type="password" name="email" id="email" required/>
+                                        </div>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><input type="button" value="Sign Up"></li>
+                                    </ul>
+                                </form>
+                            </section>
+                              
+            </section>
+
+            <!-- Footer -->
+                <section id="footer">
+                    <div class="inner">
+                        <ul class="copyright">
+                            <li>&copy; NU FinTech All rights reserved.</li>
+                        </ul>
+                    </div>
+                </section>
+
+        </div>
+
+    <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="https://kit.fontawesome.com/6df90bbe4d.js" crossorigin="anonymous"></script>
+
+        <!-- FIREBASE -->
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+            import { getAuth } from "firebase/auth";
+            import { getFirestore } from "firebase/firestore";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyBcyhqYcJQf_Xd8vJtd1D5XB6DC-1kWFHE",
+              authDomain: "nuft-applications.firebaseapp.com",
+              databaseURL: "https://nuft-applications-default-rtdb.firebaseio.com",
+              projectId: "nuft-applications",
+              storageBucket: "nuft-applications.appspot.com",
+              messagingSenderId: "447244511749",
+              appId: "1:447244511749:web:03aeaf88f08d31e9cd8a6c",
+              measurementId: "G-E2YVB3SJWS"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+            const auth = getAuth(app);
+            const firestore = getFirestore(app);
+          </script>
+</body>
+</html>
